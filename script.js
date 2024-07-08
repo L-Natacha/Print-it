@@ -23,6 +23,10 @@ console.log (slides)
 const arrowLeft = document.querySelector ( ".arrow_left")
 const arrowRight = document.querySelector (".arrow_right")
 
+// variable Bullet points
+
+const dots = document.querySelector (".dots")
+
 // fonction clique fleches slider 
 
 function clickArrowLeft () {
@@ -40,3 +44,14 @@ function clickArrowRight() {
 });
 }
 clickArrowRight ();
+
+//fonction bullet points
+
+function displayDots() {
+	for (let i =0 ; i< slides.length; i++){
+		const dot=document.createElement ("div")
+		dot.classList.add ("dot");
+		dots.appendChild (dot);
+	}
+}
+displayDots();
