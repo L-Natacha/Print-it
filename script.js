@@ -42,14 +42,21 @@ function clickArrowLeft () {
 
 		//affichage du message pour test la fonction"
 		console.log ("clique gauche fonctionne")
+
+		// retrait de la class css des bullet pleins
+		const arrayDots = document.querySelectorAll (".dots .dot");
+		arrayDots[index].classList.remove ("dot_selected");
+
 		//fonction changement d'image au click gauche
 		index --;
 			if (index < 0) {
-				index = slides - 1 ;
+				index = slides.length - 1 ;
 			}
 		// modification image et texte
 		bannerImage.src = slides[index].image;
 		bannerText.innerHTML = slides[index].tagLine;
+		// ajoutu de la class css des bullet pleins lorsque l'image à changé
+		arrayDots[index].classList.add ("dot_selected");
 		
 	})
 }
