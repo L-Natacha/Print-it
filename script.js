@@ -39,6 +39,9 @@ const bannerText= banner.querySelector("p")
 
 function clickArrowLeft () {
 	arrowLeft.addEventListener ("click",() => {
+
+		//affichage du message pour test la fonction"
+		console.log ("clique gauche fonctionne")
 		//fonction changement d'image au click gauche
 		index --;
 			if (index < 0) {
@@ -56,6 +59,9 @@ clickArrowLeft ();
 
 function clickArrowRight() {
 	arrowRight.addEventListener ( "click",() => {
+
+		//affichage du message pour test la fonction"
+		console.log ("clique droit fonctionne")
 
 		// retrait de la class css des bullet pleins
 		const arrayDots = document.querySelectorAll (".dots .dot");
